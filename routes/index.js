@@ -3,6 +3,10 @@ const apiRoutes = require('./api');
 
 router.use('/api', apiRoutes);
 
+router.get('/', (req, res) => {
+  res.send("<h1>Welcome to my app!</h1>")
+});
+
 router.use((req, res) => {
   res.send("<h1>Wrong Route!</h1>")
 });
